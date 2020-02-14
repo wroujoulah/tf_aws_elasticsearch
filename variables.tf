@@ -140,3 +140,23 @@ variable "node_to_node_encryption_enabled" {
   default     = false
 }
 
+variable "cognito_enabled" {
+  description = "Whether to enable cognito."
+  type       = bool
+  default    = false
+}
+
+variable "cognito_user_pool_id" {
+  type = string
+  default = ""
+}
+
+variable "cognito_identity_pool_id" {
+  type = string
+  default = ""
+}
+
+variable "cognito_role_arn" {
+  type = string
+  default = ""
+}

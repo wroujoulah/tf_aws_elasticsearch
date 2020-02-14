@@ -52,6 +52,13 @@ resource "aws_elasticsearch_domain" "es_vpc" {
     }
   }
 
+  cognito_options {
+    enabled          = var.cognito_enabled
+    user_pool_id     = var.cognito_user_pool_id
+    identity_pool_id = var.cognito_identity_pool_id
+    role_arn         = var.cognito_role_arn
+  }
+
   advanced_options = var.advanced_options
 
   dynamic "log_publishing_options" {
